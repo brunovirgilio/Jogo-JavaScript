@@ -19,25 +19,22 @@
             height: 500px;
             border-radius: 5px;
             background-color: white;
-           
         }
-
         .imagem{
-            height: 40%;
+            height: 55%;
         }
         .imagem img{
             width: 500px;
-            height: 216px;
+            height: 295px;
         }
-
-        .pergunta{
-            height: 57%;
+       .pergunta{
+            height: 45%;
             background-color: black;
-        }
-        .pergunta p{
             color: white;
         }
-
+        .pergunta p{
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -49,11 +46,18 @@
             <img src="_imagens/foto-microscopio.jpg" alt="foto-microscopio"/>
         </div>
         <div class='pergunta'>
-            <p>O que é COVID-19?</p>
-            <p id='a'>A -  Um Virus</p>
-            <p id='b'>B -  Um pássaro</p>
-            <p id='c'>C -  Um jogo</p>
-            <p id='d'>D -  Uma bebida</p>
+            <h2>O que é COVID-19?</h2>
+            <input type="radio" name='resposta' id='r1'>
+            <label for="r1">Um Virus</label><br>
+            <input type="radio" name='resposta' id='r2'>
+            <label for="r2">Um Pássaro</label><br>
+            <input type="radio" name='resposta' id='r3'>
+            <label for="r3">Um Jogo</label><br>
+            <input type="radio" name='resposta' id='r4'>
+            <label for="r4">Uma Bebida</label><br>
+            <p><input type="button" value='RESPONDER'>
+            <input type="button" value='PRÓXIMA'></p>
+            <p>(1/10)</p>
         </div>
     </section>
 </body>
