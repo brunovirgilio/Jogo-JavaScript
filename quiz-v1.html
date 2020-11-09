@@ -35,6 +35,9 @@
         #correcao{
             color: white;
         }
+        #botao{
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -47,7 +50,7 @@
         </div>
         <div id='resposta'>
                 <h2>O que é COVID-19?</h2>
-                <input type="radio" name='resp1' id='r1' checked>
+                <input type="radio" name='resp1' id='r1'>
                 <label for="r1">Um Virus</label><br>
                 <input type="radio" name='resp1' id='r2'>
                 <label for="r2">Um Pássaro</label><br>
@@ -56,11 +59,13 @@
                 <input type="radio" name='resp1' id='r4'>
                 <label for="r4">Uma Bebida</label><br>
             <div id='correcao'>
-                Marque sua resposta
+            
             </div>
+            <div id='botao'>
                 <p><input type="button" value='RESPONDER' onclick='gabarito()'>
                 <input type="button" value='PRÓXIMA'></p>
                 <p>(1/10)</p>
+            </div>
         </div>
     </section>
     <script>
@@ -68,15 +73,19 @@
             c=document.getElementById('correcao')
             fr1=document.getElementsByName('resp1')
             if(fr1[0].checked){
-                c.innerHTML='RESPOSTA CORRETA'
+                c.style.background ='green'
+                c.innerHTML=`RESPOSTA CORRETA`
             }
             else if(fr1[1].checked){
-                c.innerHTML='RESPOSTA ERRADA'
+                c.style.background ='red'
+                c.innerHTML=`RESPOSTA ERRADA`
             }
             else if(fr1[2].checked){
-                c.innerHTML='RESPOSTA ERRADA'
+                c.style.background ='red'
+                c.innerHTML=`RESPOSTA ERRADA`
             }
-            else(fr1[3].checked){
+            else{
+                c.style.background ='red'
                 c.innerHTML='RESPOSTA ERRADA'
             }
         }
