@@ -13,27 +13,27 @@
             color: black;
         }
 
-        .interface{
+        #interface{
             margin: auto;
             width: 500px;
             height: 500px;
             border-radius: 5px;
             background-color: white;
         }
-        .imagem{
+        #imagem{
             height: 55%;
         }
-        .imagem img{
+        #imagem img{
             width: 500px;
             height: 295px;
         }
-       .pergunta{
+       #resposta{
             height: 45%;
             background-color: black;
             color: white;
         }
-        .pergunta p{
-            text-align: center;
+        #correcao{
+            color: white;
         }
     </style>
 </head>
@@ -41,24 +41,45 @@
     <h1>
         QUIZ COVID
     </h1>
-    <section class='interface'>
-        <div class='imagem'>
+    <section id='interface'>
+        <div id='imagem'>
             <img src="_imagens/foto-microscopio.jpg" alt="foto-microscopio"/>
         </div>
-        <div class='pergunta'>
-            <h2>O que é COVID-19?</h2>
-            <input type="radio" name='resposta' id='r1'>
-            <label for="r1">Um Virus</label><br>
-            <input type="radio" name='resposta' id='r2'>
-            <label for="r2">Um Pássaro</label><br>
-            <input type="radio" name='resposta' id='r3'>
-            <label for="r3">Um Jogo</label><br>
-            <input type="radio" name='resposta' id='r4'>
-            <label for="r4">Uma Bebida</label><br>
-            <p><input type="button" value='RESPONDER'>
-            <input type="button" value='PRÓXIMA'></p>
-            <p>(1/10)</p>
+        <div id='resposta'>
+                <h2>O que é COVID-19?</h2>
+                <input type="radio" name='resp1' id='r1' checked>
+                <label for="r1">Um Virus</label><br>
+                <input type="radio" name='resp1' id='r2'>
+                <label for="r2">Um Pássaro</label><br>
+                <input type="radio" name='resp1' id='r3'>
+                <label for="r3">Um Jogo</label><br>
+                <input type="radio" name='resp1' id='r4'>
+                <label for="r4">Uma Bebida</label><br>
+            <div id='correcao'>
+                Marque sua resposta
+            </div>
+                <p><input type="button" value='RESPONDER' onclick='gabarito()'>
+                <input type="button" value='PRÓXIMA'></p>
+                <p>(1/10)</p>
         </div>
     </section>
+    <script>
+        function gabarito(){
+            c=document.getElementById('correcao')
+            fr1=document.getElementsByName('resp1')
+            if(fr1[0].checked){
+                c.innerHTML='RESPOSTA CORRETA'
+            }
+            else if(fr1[1].checked){
+                c.innerHTML='RESPOSTA ERRADA'
+            }
+            else if(fr1[2].checked){
+                c.innerHTML='RESPOSTA ERRADA'
+            }
+            else(fr1[3].checked){
+                c.innerHTML='RESPOSTA ERRADA'
+            }
+        }
+    </script>
 </body>
 </html>
