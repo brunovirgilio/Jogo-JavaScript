@@ -1,0 +1,34 @@
+
+        body{
+            background-color:rgba(153, 153, 153, 0.781);
+        }
+        body h1{
+            text-align: center;
+            color: black;
+        }
+
+        #interface{
+            margin: auto;
+            width: 500px;
+            height: 500px;
+            border-radius: 5px;
+            background-color: white;
+        }
+        #imagem{
+            height: 55%;
+        }
+        #imagem img{
+            width: 500px;
+            height: 295px;
+        }
+       #resposta{
+            height: 45%;
+            background-color: black;
+            color: white;
+        }
+        #correcao{
+            color: white;
+        }
+        #botao{
+            text-align: center;
+        }

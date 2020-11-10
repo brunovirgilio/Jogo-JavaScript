@@ -4,8 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AP3 - QUIZ COVID</title>
-    <link rel="stylesheet" href="_css/estilo.css"> 
-    
+    <style>
+        body{
+            background-color:rgba(153, 153, 153, 0.781);
+        }
+        body h1{
+            text-align: center;
+            color: black;
+        }
+
+        #interface{
+            margin: auto;
+            width: 500px;
+            height: 500px;
+            border-radius: 5px;
+            background-color: white;
+        }
+        #imagem{
+            height: 55%;
+        }
+        #imagem img{
+            width: 500px;
+            height: 295px;
+        }
+       #resposta{
+            height: 45%;
+            background-color: black;
+            color: white;
+        }
+        #correcao{
+            color: white;
+        }
+        #botao{
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <h1>
@@ -30,8 +63,8 @@
             </div>
             <div id='botao'>
                 <p><input type="button" value='RESPONDER' onclick='gabarito()'>
-                <a href="quiz-v2.html"><input type="button" value='PRÓXIMA'></a></p>
-                <p>(1/10)</p>
+                <input type="button" value='PRÓXIMA'><a href=""></a></p>
+                <p>(2/10)</p>
             </div>
         </div>
     </section>
@@ -42,7 +75,6 @@
             if(fr1[0].checked){
                 c.style.background ='green'
                 c.innerHTML=`RESPOSTA CORRETA`
-                
             }
             else if(fr1[1].checked){
                 c.style.background ='red'
