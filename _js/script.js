@@ -1,9 +1,4 @@
-function cont(){
-    n = 1
-    
-    num += n
-    return num
-}
+var cont = 0
+cont +=1
 
-n
-console.log(cont())
+console.log(cont)
