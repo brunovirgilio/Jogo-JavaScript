@@ -40,6 +40,7 @@
         }
     </style>
 </head>
+<script language='javascript' src='_js/funcao.js'></script>
 <body>
     <h1>
         QUIZ COVID
@@ -63,7 +64,7 @@
             </div>
             <div id='botao'>
                 <p><input type="button" value='RESPONDER' onclick='gabarito()'>
-                <input type="button" value='PRÓXIMA'><a href=""></a></p>
+                <a href="quiz-v2.1.html"><input type="button" value='PRÓXIMA'></a></p>
                 <p>(2/10)</p>
             </div>
         </div>
@@ -75,6 +76,7 @@
             if(fr1[0].checked){
                 c.style.background ='green'
                 c.innerHTML=`RESPOSTA CORRETA`
+                soma()
             }
             else if(fr1[1].checked){
                 c.style.background ='red'
