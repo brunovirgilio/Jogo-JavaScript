@@ -1,11 +1,12 @@
-lista=[]
+lista=[0]
 soma=0
-x=1
-function total(){
+
+function total(x){
     lista.push(x)
     for (i=0;i<lista.length;i++){
         soma +=lista[i]
     }
-    return soma
 }
-console.log(total())
+console.log(total(1))
+console.log(soma)
+

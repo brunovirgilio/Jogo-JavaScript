@@ -31,7 +31,7 @@
             </div>
             <div id='botao'>
                 <p><input type="button" value='RESPONDER' onclick='gabarito()'>
-                <a href="quiz-v2.html"><input type="button" value='PRÓXIMA' onclick="total()"></a></p>
+                <a href="quiz-v2.html"><input type="button" value='PRÓXIMA' ></a></p>
                 <p>(1/10)</p>
             </div>
         </div>
@@ -42,7 +42,8 @@
             fr1=document.getElementsByName('resp1')
             if(fr1[0].checked){
                 c.style.background ='green'
-                c.innerHTML='RESPOSTA CORRETA<a href="quiz-v2.html" onclick="total()">PROXIMA</a>'
+                c.innerHTML='RESPOSTA CORRETA<a href="quiz-v2.html" onclick="total(1)">PROXIMA</a>'
+                
             }
             else if(fr1[1].checked){
                 c.style.background ='red'
