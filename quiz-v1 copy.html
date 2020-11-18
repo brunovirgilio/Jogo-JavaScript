@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AP3 - QUIZ COVID</title>
+    <link rel="stylesheet" href="_css/estilo.css"> 
+    
+</head>
+<script language='javascript' src='_js/funcao.js'></script>
+<body>
+    <h1>
+        QUIZ COVID
+    </h1>
+    <section id='interface'>
+        <div id='imagem'>
+            <img src="_imagens/foto-microscopio.jpg" alt="foto-microscopio"/>
+        </div>
+        <div id='questao'>
+            <div id='pergunta'>
+                <h2>Pergunta</h2>
+
+            </div>
+                
+            <div id='resposta'>
+                <h2>Resposta</h2>
+                            
+            </div>
+            <div id='botao'>
+                <p><input type="button" value='RESPONDER' onclick='gabarito()'>
+                <input type="button" value='PRÓXIMA' onclick='proxima()'></p>
+                <p>(1/10)</p>
+            </div>
+        </div>
+    </section>
+    <script>
+        function gabarito(){
+            c=document.getElementById('correcao')
+            fr1=document.getElementsByName('resp1')
+            if(fr1[0].checked){
+                c.style.background ='green'
+                c.innerHTML='RESPOSTA CORRETA<a href="quiz-v2.html" onclick="total(1)">PROXIMA</a>'
+                
+            }
+            else if(fr1[1].checked){
+                c.style.background ='red'
+                c.innerHTML=`RESPOSTA ERRADA`
+            }
+            else if(fr1[2].checked){
+                c.style.background ='red'
+                c.innerHTML=`RESPOSTA ERRADA`
+            }
+            else{
+                c.style.background ='red'
+                c.innerHTML='RESPOSTA ERRADA'
+            }
+        }
+        function proxima(){
+            p=document.getElementById('pergunta')
+            p.innerHTML='<h2>O que é Covid</h2><p>1-Uma bola</p>'
+        }
+    </script>
+</body>
+</html>
