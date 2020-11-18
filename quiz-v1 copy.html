@@ -23,18 +23,44 @@
             </div>
                 
             <div id='resposta'>
-                <h2>Resposta</h2>
+                <input type="text" name='resp' id='resp'>
                             
             </div>
             <div id='botao'>
                 <p><input type="button" value='RESPONDER' onclick='gabarito()'>
-                <input type="button" value='PRÓXIMA' onclick='proxima()'></p>
+                <input type="button" value='Inicio' onclick='pergunta1()'></p>
                 <p>(1/10)</p>
             </div>
         </div>
     </section>
     <script>
-        function gabarito(){
+        cont = 0
+        n=document.getElementById('resp')
+        p=document.getElementById('pergunta')
+        r=document.getElementById('resposta')
+        function pergunta1(){
+            n=document.getElementById('resp')
+            p.innerHTML='<h2>O que é Covid</h2><p>1-Uma bola</p><br><p onclick="pergunta2()">Próxima</p>'
+            if(Number(n.value)==1){
+                cont++
+            }            
+        }
+        function pergunta2(){
+            n=document.getElementById('resp')
+            p.innerHTML='<h2>O que o Amor</h2><p>1-Uma pedra</p><br><p onclick="resultado()">Próxima</p>'
+            if(Number(n.value)==1){
+                cont+=1
+            }      
+        }
+        function resultado(){
+            n=document.getElementById('resp')
+            r.innerHTML=`o resultado foi ${cont}`
+        }
+    </script>
+</body>
+</html>
+<!--
+    function gabarito(){
             c=document.getElementById('correcao')
             fr1=document.getElementsByName('resp1')
             if(fr1[0].checked){
@@ -55,10 +81,4 @@
                 c.innerHTML='RESPOSTA ERRADA'
             }
         }
-        function proxima(){
-            p=document.getElementById('pergunta')
-            p.innerHTML='<h2>O que é Covid</h2><p>1-Uma bola</p>'
-        }
-    </script>
-</body>
-</html>
+-->
