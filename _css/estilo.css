@@ -30,5 +30,13 @@
             color: white;
         }
         #botao{
-            text-align: center;
+            
         }
+        
+        /*#botao p{
+            width: 60px;
+            margin-left: 50px;
+            padding: 5px;
+            border: 5px white solid;
+        }
+        */

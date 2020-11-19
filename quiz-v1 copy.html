@@ -18,18 +18,20 @@
         </div>
         <div id='questao'>
             <div id='pergunta'>
-                <h2>Pergunta</h2>
+                <h2>Bem vindo ao Quiz</h2>
+                <p>Digite seu nome</p>
 
             </div>
                 
             <div id='resposta'>
                 <input type="text" name='resp' id='resp'>
+                <p></p>
                             
             </div>
             <div id='botao'>
-                <p><input type="button" value='RESPONDER' onclick='gabarito()'>
-                <input type="button" value='Inicio' onclick='pergunta1()'></p>
-                <p>(1/10)</p>
+                <p></p>
+                <p></p>
+                <p onclick="pergunta1()">Inciar</p>
             </div>
         </div>
     </section>
@@ -38,22 +40,77 @@
         n=document.getElementById('resp')
         p=document.getElementById('pergunta')
         r=document.getElementById('resposta')
+        r1=document.getElementsByTagName('p')[1]
+        r2=document.getElementsByTagName('p')[2]
+        r3=document.getElementsByTagName('p')[3]
+        r4=document.getElementsByTagName('p')[4]
+
         function pergunta1(){
-            n=document.getElementById('resp')
-            p.innerHTML='<h2>O que é Covid</h2><p>1-Uma bola</p><br><p onclick="pergunta2()">Próxima</p>'
+            p.innerHTML='<h2>Qual o seu nome?</h2><p>1-Bruno</p>'
+            r1.innerHTML=' '
+            r2.innerHTML=' '
+            r3.innerHTML=' '
+            r4.innerHTML=' '
+            r2.innerHTML='<p onclick="confirma1()">Confirma</p>'            
+        }
+
+        function confirma1(){
             if(Number(n.value)==1){
                 cont++
-            }            
+                r1.innerHTML='Resposta Correta'
+                r1.style.background='green'
+            }
+            else{
+                r1.innerHTML='Resposta Errada'
+                r1.style.background='red'
+            }
+            r2.innerHTML=''    
+            r3.innerHTML='<p onclick="pergunta2()">Próxima</p>'
         }
+        
         function pergunta2(){
-            n=document.getElementById('resp')
-            p.innerHTML='<h2>O que o Amor</h2><p>1-Uma pedra</p><br><p onclick="resultado()">Próxima</p>'
-            if(Number(n.value)==1){
-                cont+=1
-            }      
+            p.innerHTML='<h2>O que é Covid</h2><p>1-Uma bola</p>'
+            r1.innerHTML=' '
+            r2.innerHTML=' '
+            r3.innerHTML=' '
+            r2.innerHTML='<p onclick="confirma2()">Confirma</p>'            
+        }
+        function confirma2(){
+            if(Number(n.value)==2){
+                cont++
+                r1.innerHTML='Resposta Correta'
+                r1.style.background='green'
+            }
+            else{
+                r1.innerHTML='Resposta Errada'
+                r1.style.background='red'
+            }
+            r2.innerHTML=''    
+            r3.innerHTML='<p onclick="pergunta3()">Próxima</p>'
+        }
+        function pergunta3(){
+            p.innerHTML='<h2>O que é a vida</h2><p>1-Um mistério</p>'
+            r1.innerHTML=' '
+            r2.innerHTML=' '
+            r3.innerHTML=' '
+            r2.innerHTML='<p onclick="confirma3()">Confirma</p>'      
+        }
+        function confirma3(){
+            if(Number(n.value)==3){
+                cont++
+                r1.innerHTML='Resposta Correta'
+                r1.style.background='green'
+            }
+            else{
+                r1.innerHTML='Resposta Errada'
+                r1.style.background='red'
+            }
+            r2.innerHTML=''    
+            r3.innerHTML='<p onclick="resultado()">Resultado</p>'
         }
         function resultado(){
-            n=document.getElementById('resp')
+            p.innerHTML=' '
+            r3.innerHTML=' '
             r.innerHTML=`o resultado foi ${cont}`
         }
     </script>
