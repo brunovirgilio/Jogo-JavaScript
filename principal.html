@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AP3 - QUIZ COVID</title>
+    <title>QUIZ</title>
     <link rel="stylesheet" href="_css/estilo.css"> 
     
 </head>
 <script language='javascript' src='_js/funcao.js'></script>
 <body>
     <h1>
-        QUIZ COVID
+        QUIZ CONHECIMENTOS GERAIS
     </h1>
     <section id='interface'>
         <div id='imagem'>
@@ -42,8 +42,10 @@
         r3=document.getElementsByTagName('p')[3]
         r4=document.getElementsByTagName('p')[4]
         h1=document.getElementsByTagName('h2')[1]
+        var nome
 
         function pergunta1(){
+            nome=document.getElementById('resp').value
             p.innerHTML='<h2>1. Normalmente, quantos litros de sangue uma pessoa tem? Em média, quantos são retirados numa doação de sangue?</h2><p>1) Tem entre 2 a 4 litros. São retirados 450 mililitros<br>2) Tem entre 4 a 6 litros. São retirados 450 mililitros<br>3) Tem 10 litros. São retirados 2 litros<br>4)Tem 7 litros. São retirados 1,5 litros<br>5) Tem 0,5 litros. São retirados 0,5 litros<br></p>'
             r1.innerHTML=' '
             r2.innerHTML=' '
@@ -248,8 +250,9 @@
         }
         function resultado(){
             p.innerHTML=' '
-            r3.innerHTML=' '
-            r.innerHTML =`o resultado foi ${cont}`
+            r2.innerHTML=' '
+            r3.innerHTML='<a href="principal.html">Refazer</a>'
+            r.innerHTML =`Olá ${nome}, das 10 questões você acertou ${cont}`
         }
     </script>
 </body>
