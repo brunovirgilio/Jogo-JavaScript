@@ -1,11 +1,12 @@
 
         body{
-            background-color:rgba(153, 153, 153, 0.781);
+            background-color:rgba(0, 93, 146, 0.781);
         }
         body h1{
             text-align: center;
-            color: black;
+            color: rgb(252, 249, 92);
             margin: 0px;
+            font-family: Arial, Helvetica, sans-serif;
         }
 
         #interface{
@@ -24,6 +25,7 @@
         }
         #pergunta h2{
             font-size: 17px;
+            font-family: Arial, Helvetica, sans-serif;
         }
         #pergunta p{
             font-size: 15px;
@@ -39,8 +41,8 @@
             margin-right: 400px;
             margin-bottom: 10px;
             padding: 0px;
-            border: 1px black solid;
-            background-color: black;
+            border: 1px rgba(0, 93, 146, 0.781);
+            background-color:rgba(1, 19, 121, 0.884);
             color: white;
             text-align: center;
         }
