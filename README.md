@@ -1,2 +1,2 @@
-# Projeto-Quiz_Covid
+# Jogo em JavaScript
  
