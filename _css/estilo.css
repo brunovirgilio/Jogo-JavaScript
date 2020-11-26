@@ -45,6 +45,7 @@
             background-color:rgba(1, 19, 121, 0.884);
             color: white;
             text-align: center;
+            cursor: pointer;
         }
         #botao a{
             color: white;
